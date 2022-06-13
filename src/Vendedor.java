@@ -4,8 +4,8 @@ public class Vendedor extends Funcionario{
 	private double valorComissao;
 
 	@Override
-	public void listarFuncionario() {
-		System.out.println("Nome: " + getNome() + ", CPF: " + getCpf() + ", Salario Base: " + getSalarioBase() + ", Salario Final: " + getSalarioFinal() + ", Valor Bonificacao: " + getValorBonificacao() + ", Valor Comissao: " + valorComissao);
+	public String listarFuncionario() {
+		return "Nome: " + getNome() + ", CPF: " + getCpf() + ", Salario Base: " + getSalarioBase() + ", Salario Final: " + getSalarioFinal() + ", Valor Bonificacao: " + getValorBonificacao() + ", Valor Comissao: " + valorComissao;
 	}
 
 	@Override
@@ -16,7 +16,7 @@ public class Vendedor extends Funcionario{
 
 	@Override
 	public String apresentarSalario() {
-		return "Nome: " + getNome() + ", Salario Base: " + getSalarioBase() + ", Bonificacao: " + getValorBonificacao() + ", Valor Comissao: " + valorComissao + ", Salario Final: " + getSalarioFinal();
+		return "Nome: " + getNome() + ", Salario Base: " + getSalarioBase() + ", Bonificacao: " + getValorBonificacao() + ", Valor Comissao: " + valorComissao + ", Salario Final: " + (valorComissao + getSalarioBase() + getValorBonificacao());
 	}
 
 	public double getValorComissao() {

@@ -17,7 +17,7 @@ public abstract class Funcionario {
 		this.salarioBase = salarioBase;
 	}
 	
-	public abstract void listarFuncionario();
+	public abstract String listarFuncionario();
 	public abstract void calcularSalarioFinal(double bonificacao);
 	public abstract String apresentarSalario();
 
